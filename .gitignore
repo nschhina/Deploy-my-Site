@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# DS_Store trash
+.DS_Store
+
 # Compiled Object files
 *.slo
 *.lo

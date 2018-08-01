@@ -1,0 +1,13 @@
+---
+- name: Deploy new changes
+  hosts: all
+  become: yes
+  tasks:
+    - name: Initiate terraform
+      shell: terraform init
+    - name: validate website terraform
+      shell: terraform validate website
+    - name: select terraform prod
+      shell: terraform workspace select prod
+    - name: Apply new terraform to production
+      shell: terraform apply -auto-approve website
