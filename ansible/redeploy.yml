@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: Initiate terraform
-      shell: terraform init terraform
+      shell: terraform init ../terraform
     - name: validate website terraform
       shell: terraform validate website
     - name: select terraform prod
