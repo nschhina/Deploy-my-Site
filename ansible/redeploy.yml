@@ -3,24 +3,19 @@
   hosts: all
   become: yes
   tasks:
-    - shell: 'pwd'
+    - name: Initiate terraform
+      shell: terraform init /home/travis/build/nschhina/Website-AWS-Deployer/terraform
+
+    - name: validate website terraform
+      shell: terraform validate /home/travis/build/nschhina/Website-AWS-Deployer/terraform/website
+    - name: chdir
+      shell: cd /home/travis/build/nschhina/Website-AWS-Deployer/
+    - shell: pwd
       register: cmd
     - debug:
         msg: "{{ cmd.stdout }}"
-    - shell: cd ..
-    - name: Initiate terraform
-      shell: terraform init terraform
-    - shell: 'pwd'
-      register: cmd2
-    - debug:
-        msg: "{{ cmd2.stdout }}"
-    - name: validate website terraform
-      shell: terraform validate ../terraform/website
-    - shell: 'pwd'
-      register: cmd3
-    - debug:
-        msg: "{{ cmd3.stdout }}"
     - name: select terraform prod
       shell: terraform workspace select prod
+      
     - name: Apply new terraform to production
       shell: terraform apply -auto-approve website
