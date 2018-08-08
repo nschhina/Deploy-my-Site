@@ -7,8 +7,9 @@
       register: cmd
     - debug:
         msg: "{{ cmd.stdout }}"
+    - shell: cd ..
     - name: Initiate terraform
-      shell: terraform init ../terraform
+      shell: terraform init terraform
     - shell: 'pwd'
       register: cmd2
     - debug:
