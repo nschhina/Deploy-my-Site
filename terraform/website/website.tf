@@ -32,7 +32,7 @@ POLICY
 
 
 locals {
-  site_root = "../terraform/website/static/"
+  site_root = "../terraform/website/static"
   index_html = "${local.site_root}/index.html"
   main_css = "${local.site_root}/style.css"
 }
