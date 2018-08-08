@@ -4,7 +4,9 @@
   become: yes
   tasks:
     - name: chdir to proj_root
-      shell: cd ..
+      shell: cd ~
+    - name: which directory
+      shell: pwd
     - name: Initiate terraform
       shell: terraform init terraform
     - name: validate website terraform
