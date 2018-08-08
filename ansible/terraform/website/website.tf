@@ -32,9 +32,9 @@ POLICY
 
 
 locals {
-  site_root = "static"
-  index_html = "${local.site_root}/index.html"
-  main_css = "${local.site_root}/style.css"
+  site_root = "../terraform/website/static/"
+  index_html = "${local.site_root}index.html"
+  main_css = "${local.site_root}style.css"
 }
 
 resource "aws_s3_bucket_object" "index" {
