@@ -1,0 +1,132 @@
+h1,h3 {
+	text-align: center;
+	font-family: Arvo;
+	color: #374054;
+}
+
+#dp{
+	height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    margin: auto;
+    display: block;
+    
+
+}
+.header{
+background: #ffffff;
+/*border: #374054 2px solid;*/
+
+}
+body{
+	background-color: #f2f2f5;
+
+}
+.arrange{
+	
+	color: #374054;
+	text-align: center;
+
+}
+a{
+	color: #374054;
+	padding-left: 2.5%;
+	padding-right:2.5%;
+	
+}
+.header h2{
+	text-align: left;
+	font-family: Arvo;
+	color: #374054;
+	float: left;
+	margin-left: 5%;
+	left-padding: 10px;
+}
+#hw{
+	width: 50px;
+	height: 50px;
+}
+
+blockquote{
+	border-left: 4px solid #426db2;
+	margin-left: 5%;
+	left-padding: 10px;
+
+}
+strong{
+	color: #426db2;
+}
+blockquote a{
+	padding-left: 0%;
+}
+span h2{
+	text-align: center;
+	color: #374054;
+	font-family: 'Arvo';
+}
+
+.shadow{
+	box-shadow:  0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
+	overflow: auto;
+}
+.inline {
+	overflow: auto;
+}
+.inline h3{
+	text-align: center;
+}
+
+#datestamp{
+	border-right: 0px;
+	color: #426db2;
+	text-align: right;
+    font-family: Arvo;
+    float: right;
+    margin-right: 5%;
+}
+h4{
+	color: #8491ae;
+	text-align: center;
+}
+.description{
+	margin-left: 20px;
+	left-padding: 30px;
+	border-left: 2px solid #fff;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#myDiv 
+{
+  height:104px;
+  width:140px;
+}
+#myDiv img
+{
+  max-width:100%; 
+  max-height:100%;
+  margin:auto;
+  display:block;
+}
+
+.grid_element {
+  display: inline-block;
+  width: 50px;
+  height:50px;
+  zoom: 1;         /* for IE */
+  display*:inline; /* for IE */
+}
+#skill{
+	text-align: center;
+}
+.custombtn{
+ padding-left: 2.5%;
+ padding-right: 2.5%;
+  margin-left: 1%;
+ margin-right: 1%;
+
+}
+footer{
+	background: #47526c;
+}

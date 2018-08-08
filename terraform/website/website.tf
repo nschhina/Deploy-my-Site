@@ -32,7 +32,7 @@ POLICY
 
 
 locals {
-  site_root = "/home/travis/build/nschhina/Website-AWS-Deployer/terraform/website/static/"
+  site_root = "/home/travis/build/nschhina/Website-AWS-Deployer/terraform/website/site/"
   index_html = "${local.site_root}index.html"
   main_css = "${local.site_root}style.css"
 }
