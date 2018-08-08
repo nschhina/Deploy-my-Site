@@ -3,6 +3,8 @@
   hosts: all
   become: yes
   tasks:
+    - name: chdir to proj_root
+      shell: cd ..
     - name: Initiate terraform
       shell: terraform init terraform
     - name: validate website terraform
