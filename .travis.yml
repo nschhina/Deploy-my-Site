@@ -5,16 +5,13 @@ python: "2.7"
 before_install:
   # Make sure everything's up to date.
   - sudo apt-get update -qq
+  - wget https://releases.hashicorp.com/terraform/0.7.13/terraform_0.7.13_linux_amd64.zip -O /tmp/terraform.zip
+  - sudo unzip -d /usr/local/bin/ /tmp/terraform.zip
 
 install:
   # Install Ansible.
   - pip install ansible
 
 script:
-  # We'll add some commands to test the role here.
-  - curl -fSL "https://releases.hashicorp.com/terraform/0.6.15/terraform_0.6.15_linux_amd64.zip" -o terraform.zip
-  - sudo unzip terraform.zip -d /opt/terraform
-  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
-  - rm -f terraform.zip
   # inst all ansible
   - "ansible-playbook -i ansible/inventory ansible/redeploy.yml --connection=local --sudo"
